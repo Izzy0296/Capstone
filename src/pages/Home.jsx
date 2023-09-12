@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import BasicExample from '../components/NavBar'
 import Nav from '../components/NavBar'
+import Form from '../components/Login'
+import Login from '../components/Login'
 
 
 
@@ -30,11 +32,35 @@ const Home = () => {
 
   },[])
 
+function Sort(){
+  //logic
+  //use items state items.sort
+  //within sort method use a callback
+  //within the callback use sorting logic
+  //items.sort return new array
+  //call setitems and store that value
+  //create button with jsx using onclick
+}
+function Filter(){
+  //logic
+  //use items state items.filter
+  //within sort method use a callback
+  //within the callback use sorting logic
+  //items.sort return new array
+  //call setitems and store that value
+  //create button with jsx using onclick
+}
+
+
 
 return(
     <div className= "container">
         
         < Nav />
+       
+        
+       
+       
         
       
         {
