@@ -3,9 +3,9 @@ function Nav(){
 
 return(
     <div className="topnav">
-  <a class="active" href="#home">Home</a>
+  <a class="active" href="/products">Home</a>
   <a href="/">Login</a>
-  <a href="#about">About</a>
+  <a href="/shoppingcart">Cart</a>
 </div>
 )
 

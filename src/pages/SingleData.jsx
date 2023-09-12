@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {useParams}  from 'react-router-dom'
+import Nav from '../components/NavBar'
+
 
 const SingleData= ()=>{
 const [singledata, setSingleData] = useState([])
@@ -27,8 +29,12 @@ RenderSingleData()
 
 
 return(
-
+ 
     <div>
+        <div>
+            <Nav />
+        </div>
+       
  <img className = "image2" src = {singledata.image}  />
     
     <p>{singledata.title}</p>

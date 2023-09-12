@@ -4,6 +4,7 @@ import SingleData from './pages/SingleData'
 import Form from './components/Login'
 import './App.css'
 import Login from './components/Login'
+import Cart from './pages/Cart'
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
     <Route path='/' element= {<Login />}/>
     <Route path='/products' element= {<Home />}/>
     <Route path='/:id' element= {<SingleData />}/>
+    <Route path='/shoppingcart' element= {<Cart />}/>
     
    
 

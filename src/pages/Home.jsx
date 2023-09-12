@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import BasicExample from '../components/NavBar'
 import Nav from '../components/NavBar'
 import Form from '../components/Login'
 import Login from '../components/Login'
@@ -66,7 +65,30 @@ function SortByTitle() {
   //call setitems and store that value
   //create button with jsx using onclick
 
-function Filter(){
+  function FilterByPrice(maxPrice) {
+    const filteredItems = items.filter((item) => item.price <= maxPrice);
+    setItems(filteredItems);
+  }
+  function FilterByCost(minPrice) {
+    const filterItems = items.filter((item) => item.price <= minPrice);
+    setItems(filterItems);
+  }
+
+  function FilterByTitle(searchTerm) {
+    const filteredItems = items.filter((item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setItems(filteredItems);
+  }
+
+  function FilterByCategory(selectedCategory) {
+    const filteredItems = items.filter(
+      (item) => item.category === selectedCategory
+    );
+    setItems(filteredItems);
+  }
+  
+  
   //logic
   //use items state items.filter
   //within sort method use a callback
@@ -74,7 +96,7 @@ function Filter(){
   //items.sort return new array
   //call setitems and store that value
   //create button with jsx using onclick
-}
+
 
 
 
@@ -82,9 +104,22 @@ return(
     <div className= "container">
         
         < Nav />
-        <button onClick={Sort}>Sort by Price (Ascending)</button>
+       <div className= "buttons"> <button onClick={Sort}>Sort by Price (Ascending)</button>
         <button onClick={SortByTitle}>Sort by Title (Alphabetical)</button>
         <button onClick={SortByCategory}>Sort by Category (Alphabetical)</button>
+        </div>
+
+        <div className= "filter">
+        <button onClick={() => FilterByPrice(50)}>Filter by Price (Max $50)</button>
+        <button onClick={() => FilterByCost(15)}>Filter by Price (Min $15)</button>
+ 
+        <select onChange={(e) => FilterByCategory(e.target.value)}>
+        <option value="">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Clothing">Clothing</option>
+        {/* Add more category options */}
+        </select>
+        </div>
        
         
        
