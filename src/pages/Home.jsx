@@ -33,14 +33,39 @@ const Home = () => {
   },[])
 
 function Sort(){
-  //logic
+    // Create a copy of the items array to avoid mutating the original data.
+    const sortedItems = [...items];
+
+    // Use the sort() method with a comparison function to sort by the "price" property.
+    sortedItems.sort((a, b) => a.price - b.price);
+  
+    // Update the state with the sorted array.
+    setItems(sortedItems);
+}
+
+function SortByTitle() {
+    const sortedItems = [...items];
+    sortedItems.sort((a, b) => a.title.localeCompare(b.title));
+    setItems(sortedItems);
+  }
+  
+  function SortByCategory() {
+    const sortedItems = [...items];
+    sortedItems.sort((a, b) => a.category.localeCompare(b.category));
+    setItems(sortedItems);
+  }
+
+
+
+   
+
   //use items state items.sort
   //within sort method use a callback
   //within the callback use sorting logic
   //items.sort return new array
   //call setitems and store that value
   //create button with jsx using onclick
-}
+
 function Filter(){
   //logic
   //use items state items.filter
@@ -57,6 +82,9 @@ return(
     <div className= "container">
         
         < Nav />
+        <button onClick={Sort}>Sort by Price (Ascending)</button>
+        <button onClick={SortByTitle}>Sort by Title (Alphabetical)</button>
+        <button onClick={SortByCategory}>Sort by Category (Alphabetical)</button>
        
         
        

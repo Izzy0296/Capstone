@@ -32,14 +32,14 @@ function Login(){
             <form onSubmit = {handleSubmit}>
         <label>
             Email:
-            <input type="text" onChange= {handleChangeEmail} value = {email}/>
+            <input type="text" onChange= {handleChangeEmail} value = {email} required/>
             
         </label>
        
         
         <label>
             Password:
-            <input type="password" onChange= {handleChangePassword} value = {password} />
+            <input type="password" onChange= {handleChangePassword} value = {password} required />
            
         </label>
 

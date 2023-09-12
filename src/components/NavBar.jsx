@@ -4,7 +4,7 @@ function Nav(){
 return(
     <div className="topnav">
   <a class="active" href="#home">Home</a>
-  <a href="#contact">Contact</a>
+  <a href="/">Login</a>
   <a href="#about">About</a>
 </div>
 )
