@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
 
-function Nav(){
+function Nav() {
 
-return(
-    <div className="topnav">
-  <a class="active" href="/products">Home</a>
-  <a href="/">Login</a>
-  <a href="/shoppingcart">Cart</a>
-</div>
-)
+    return (
+        <div className="topnav">
+            <Link to='/products'> <a>Home</a></Link>
+            <Link to='/'> <a>Login</a></Link>
+            <Link to='/shoppingcart'> <a>Cart</a></Link>
+
+        </div>
+    )
 
 }
 

@@ -32,7 +32,7 @@ return(
  
     <div>
         <div>
-            <Nav />
+            
         </div>
        
  <img className = "image2" src = {singledata.image}  />
