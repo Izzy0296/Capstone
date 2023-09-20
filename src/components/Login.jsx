@@ -1,70 +1,21 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState } from 'react'
+
+import SignUpForm from './SignUpForm';
+import Authenticate from './Authenticate';
 
 
-function Login(){
-    const [email, SetEmail] = useState("")
-    const [password, SetPassword] =useState("")
-    
-    
-    function handleSubmit(e){
-        e.preventDefault()
-        console.log({email, password})
 
-    }
+function Login() {
+    const [token, setToken]= useState(null);
     
-    function handleChangeEmail(e){
-        SetEmail(e.target.value)
-    }
-    console.log({email})
-    
-    function handleChangePassword(e){
-        SetPassword(e.target.value)
-    }
-    console.log({password})
-
   
-    
-    
-    return(
-        <div className= "app">
-            <h2>Login</h2>
-            <form onSubmit = {handleSubmit}>
-        <label>
-            Email:
-            <input type="text" onChange= {handleChangeEmail} value = {email} required/>
-            
-        </label>
-       
-        
-        <label>
-            Password:
-            <input type="password" onChange= {handleChangePassword} value = {password} required />
-           
-        </label>
-
-      <Link to= "/products">
-        <button>Submit</button>
-      </Link>
-
-
-            </form>
-        </div>
+    return (
+      <>
+       <SignUpForm token={token} setToken={setToken} />
+        <Authenticate />
+      </>
     )
-}
-
-
-
-
-
-
-
-
-
-
-
-export default Login;
-
-
-
+  }
+  
+  export default Login
 

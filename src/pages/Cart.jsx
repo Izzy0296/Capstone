@@ -1,39 +1,27 @@
 import Nav from "../components/NavBar";
 import { useContext } from "react";
 import { CartContext } from "../cartcontext";
+import { useNavigate } from "react-router-dom";
+import { CartItem } from "../components/CartItem";
+
+
 
 
 function Cart() {
-    const {cart, removeFromCart, updateQuantity} = useContext(CartContext);
+    const {cart, removeFromCart, updateQuantity, cartTotal, login} = useContext(CartContext);
+    const navigate = useNavigate()
     
-    console.log(cart)
 
     
 
     return (
         <div>
-            {cart.map((shopping) => {
+            {cart.map((shopping,index) => {
                 return (
-                    <div>
-                    <img className = "image3" src = {shopping.image}  />
-                    <p key={shopping.title}>{shopping.title} </p>
-                    <p key={shopping.price}>${shopping.price} </p>
-                    <p>Quantity: {shopping.quantity}</p>
-                    <button onClick={() => updateQuantity(shopping, shopping.quantity + 1)}>
-                        +
-                    </button>
-                     <button onClick={() => updateQuantity(shopping, shopping.quantity - 1)}>
-                        -
-                    </button>
-                   
-                    <button onClick={() => removeFromCart(shopping)}>Delete</button>
-                
-                
-                    
-
-                    </div>
+                   <CartItem shopping= {shopping} index={index}/>
                 )
             })}
+           {login?  <button onClick={() => navigate('/checkout')}>checkout</button>:""}
         </div>
 
     )
@@ -43,34 +31,8 @@ function Cart() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default Cart;
+
+
+
+

@@ -54,25 +54,44 @@ width: 300px;
 }
 
 .topnav {
-  background-color: #333;
+  background-color: #d6d5d5;
   overflow: hidden;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #6d79ca;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #c8bbbb;
   color: black;
 }
 
 .topnav a.active {
   background-color: #c21313;
-  color: white;
+  color: rgb(74, 50, 50);
+}
+
+.profile {
+  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+
+.profile:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.profile {
+  padding: 2px 16px;
+}
+
+body{
+  background-color: #f4f1f1;
 }

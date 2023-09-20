@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Nav from '../components/NavBar'
 import { CartContext } from '../cartcontext'
 
+
 import Form from '../components/Login'
 import Login from '../components/Login'
 
@@ -11,10 +12,11 @@ import Login from '../components/Login'
 
 const Home = () => {
     const [items, setItems] = useState([])
-    const { addToCart, cart } = useContext(CartContext)
+    const { addToCart, cart, login } = useContext(CartContext)
     console.log(cart, 'cart imported from cartcontext')
     //const [newdata, setNewData] = useState("")
     const navigate = useNavigate()
+    console.log(login, 'youre logged in')
 
     useEffect(() => {
         async function GetAllData() {
@@ -92,10 +94,6 @@ const Home = () => {
     }
 
 
-
-
-
-
     //logic
     //use items state items.filter
     //within sort method use a callback
@@ -135,13 +133,14 @@ const Home = () => {
             {
                 items.map((info) => {
                     const product = {
+                        id: info.id,
                         title: info.title,
                         price: info.price,
                         image: info.image
                     }
                     return (
 
-                        <div>
+                        <div className = "profile">
                             <img className="image" src={info.image} />
 
                             <h2 key={info.title}>{info.title}</h2>
