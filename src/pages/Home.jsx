@@ -60,14 +60,6 @@ const Home = () => {
 
 
 
-
-    //use items state items.sort
-    //within sort method use a callback
-    //within the callback use sorting logic
-    //items.sort return new array
-    //call setitems and store that value
-    //create button with jsx using onclick
-
     function FilterByPrice(maxPrice) {
         const filteredItems = items.filter((item) => item.price <= maxPrice);
         setItems(filteredItems);
@@ -84,23 +76,14 @@ const Home = () => {
         setItems(filteredItems);
     }
 
-    function FilterByCategory(selectedCategory) {
-        const filteredItems = items.filter(
-            (item) => item.category === selectedCategory
+     function FilterByCategory(selectedCategory) {
+         const filteredItems = items.filter(
+             (item) => item.category === selectedCategory
         );
-        setItems(filteredItems);
+         setItems(filteredItems);
     }
-
-
-    //logic
-    //use items state items.filter
-    //within sort method use a callback
-    //within the callback use sorting logic
-    //items.sort return new array
-    //call setitems and store that value
-    //create button with jsx using onclick
-
-
+ 
+    
 
 
     return (
@@ -117,8 +100,8 @@ const Home = () => {
 
                 <select onChange={(e) => FilterByCategory(e.target.value)}>
                     <option value="">All Categories</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Clothing">Clothing</option>
+                    <option value="jewelery">Jewelery</option>
+                    <option value="men's clothing">Men's Clothing</option>
 
                 </select>
             </div>
@@ -172,10 +155,6 @@ const Home = () => {
     )
 
 }
-
-
-
-
 
 
 
