@@ -29,11 +29,11 @@ export default function Authenticate({ token }) {
   
     return (
       <div>
-        <h2>Authenticate</h2>
-        <p>Logged in as: {username}</p>
+        
+       
         {successMessage && <p>{successMessage}</p>}
         {error && <p>{error}</p>}
-        <button onClick={handleClick}>Authenticate Token!</button>
+      
       </div>
     );
   }

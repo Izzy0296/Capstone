@@ -4,8 +4,6 @@ import Nav from '../components/NavBar'
 import { CartContext } from '../cartcontext'
 
 
-import Form from '../components/Login'
-import Login from '../components/Login'
 
 
 
@@ -142,18 +140,22 @@ const Home = () => {
 
                         <div className = "profile">
                             <img className="image" src={info.image} />
-
-                            <h2 key={info.title}>{info.title}</h2>
-
-                            <h3 key={info.price}>Price: ${info.price} </h3>
-
-                            <h3 key={info.description}>{info.description} </h3>
-
+                            <div className = "text">
+                            <h2 className= "title" key={info.title}>{info.title}</h2>
                             <h3 key={info.category}>{info.category} </h3>
 
-                            <button onClick={() => navigate(`/${info.id}`)}>View</button>
 
-                            <button onClick={() => addToCart(product)}>Add</button>
+                            <h4 key={info.description}>{info.description} </h4>
+                            <h3 key={info.price}>Price: ${info.price} </h3>
+
+                            </div>
+                            
+                            <button onClick={() => navigate(`/${info.id}`)}>View</button>
+                           
+                          
+                           <button onClick={() => addToCart(product)}>Add</button>
+                          
+                            
 
                         </div>
                     )

@@ -7,6 +7,7 @@ function Nav() {
 
     return (
         <div className="topnav">
+           
             <Link to='/products'> <a>Home</a></Link>
             {login ?  (<span onClick={logoutFunc}>Logout</span> ): <Link to='/'> <a>Login</a></Link>}
             <Link to='/shoppingcart'> <a>Cart</a></Link>

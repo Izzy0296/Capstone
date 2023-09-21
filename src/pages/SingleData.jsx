@@ -37,9 +37,13 @@ return(
        
  <img className = "image2" src = {singledata.image}  />
     
-    <p>{singledata.title}</p>
-    <p>{singledata.description}</p>
+    <div className = "singletext">
+   
+    <p className = "title2">{singledata.title}</p>
     <p>{singledata.category}</p>
+    <p>{singledata.description}</p>
+    
+    </div>
    
 
 
