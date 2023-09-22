@@ -19,7 +19,26 @@
                     
                     
                        const addToCart = (info) => {
-                        setCart([...cart, { ...info, quantity: 1 }]);
+                        // setCart([...cart, { ...info, quantity: 1 }]);
+
+                        // setCart([...cart, { ...info, quantity: 1 }]);
+                        // setCart(prev=>{
+                        //   return [...prev, {...info, quantity:1}]
+                        // })
+                        setCart(prev=>{
+                          let isFound = prev.find(item=>item.id == info.id)
+                          if(isFound){
+                            return prev.map(ele=> {
+                              if(isFound.id == ele.id){
+                                return {...ele, quantity:ele.quantity+1}
+                              }else{
+                                return ele
+                              }
+                            })
+                          }else{
+                            return [...cart,  { ...info, quantity: 1 }]
+                          }
+                        })
                       };
                     
                         //remove from cart

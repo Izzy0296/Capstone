@@ -10,6 +10,7 @@ import { CartContext } from '../cartcontext'
 
 const Home = () => {
     const [items, setItems] = useState([])
+    const [displayedItems, setDisplayedItems] = useState([])
     const { addToCart, cart, login } = useContext(CartContext)
     console.log(cart, 'cart imported from cartcontext')
     //const [newdata, setNewData] = useState("")
