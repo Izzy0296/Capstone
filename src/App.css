@@ -132,3 +132,25 @@ body{
  .title2{
   text-decoration: underline;
  }
+
+ .form{
+  background: #eaf0ea;
+  font-family: Montserrat, sans-serif;;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #dce9e8;
+  padding: 40px;
+  box-shadow:
+	  inset #e0e9e0 0 0 0 5px, 
+    inset #eff7f1 0 0 0 1px, 
+    inset #c9d3c9 0 0 0 10px, 
+    inset #d6e5d8 0 0 0 11px, 
+    inset #cdd7da 0 0 0 16px, 
+    inset #cddad2 0 0 0 17px, 
+    inset #e5f9f7 0 0 0 21px, 
+    inset #dadedc 0 0 0 22px;
+  text-shadow: 3px 3px 1px #435d63;
+  margin: 2em;
+
+ }
